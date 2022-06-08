@@ -10,13 +10,19 @@
 
 | Title | Description | Command | Arguments | 
 | --- | --- | --- | --- |
-| Ram Buster Book | Overload a servers ram usage via NBT tag overload (creative only) | `.bookcrash` | None | 
-| Coordinates | Copy your current x, z coordinates to your clipboard or say in chat | `.coordinates` | clipboard / chat |
+| `Ram Buster Book` | Overload a servers ram usage via NBT tag overload (creative only) | `.bookcrash` | None | 
+| `Coordinates` | Copy your current x, z coordinates to your clipboard or say in chat | `.coordinates` | clipboard / chat |
+
+<h2 align="left">Modules Added</h2>
+
+| Title | Description |
+| --- | --- |
+| `AutoLeave` | Automaticlly leave if a selected entity enters range |
+
 
 <h2 align="left">Utils Added</h2>
 
-
-Toast - Send a toast when doing a task
+#### Toast - Send a toast when doing a task
 
 Function: sendToast( Title, Description )
 ```java
