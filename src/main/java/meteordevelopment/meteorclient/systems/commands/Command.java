@@ -49,10 +49,6 @@ public abstract class Command {
         return LiteralArgumentBuilder.literal(name);
     }
 
-    public void sendToast(String title, String info){
-        mc.getToastManager().add(new SystemToast(SystemToast.Type.TUTORIAL_HINT, new LiteralText(title), new LiteralText(info)));
-    }
-
     public final void registerTo(CommandDispatcher<CommandSource> dispatcher) {
         register(dispatcher, name);
         for (String alias : aliases) register(dispatcher, alias);

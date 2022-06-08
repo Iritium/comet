@@ -16,10 +16,8 @@ import meteordevelopment.meteorclient.utils.misc.Keybind;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.toast.SystemToast;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import org.jetbrains.annotations.NotNull;
@@ -47,13 +45,6 @@ public abstract class Module implements ISerializable<Module>, Comparable<Module
     public boolean toggleOnBindRelease = false;
     public boolean chatFeedback = true;
     public boolean favorite = false;
-
-    // Added by comet
-    public void sendToast(String title, String info) {
-        mc.getToastManager().add(new SystemToast(SystemToast.Type.TUTORIAL_HINT, new LiteralText(title), new LiteralText(info)));
-    }
-
-    // --------------
 
     public Module(Category category, String name, String description) {
         this.mc = MinecraftClient.getInstance();

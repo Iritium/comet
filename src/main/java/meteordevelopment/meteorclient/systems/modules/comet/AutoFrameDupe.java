@@ -10,20 +10,15 @@ import meteordevelopment.meteorclient.settings.BoolSetting;
 import meteordevelopment.meteorclient.settings.IntSetting;
 import meteordevelopment.meteorclient.settings.Setting;
 import meteordevelopment.meteorclient.settings.SettingGroup;
-import meteordevelopment.meteorclient.systems.friends.Friends;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.player.FindItemResult;
 import meteordevelopment.meteorclient.utils.player.InvUtils;
+import meteordevelopment.meteorclient.utils.Utils;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.decoration.ItemFrameEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemFrameItem;
 import net.minecraft.item.Items;
-import net.minecraft.network.packet.s2c.play.DisconnectS2CPacket;
-import net.minecraft.text.LiteralText;
-import net.minecraft.util.Hand;
 
 public class AutoFrameDupe extends Module {
     public enum Mode {
@@ -57,14 +52,14 @@ public class AutoFrameDupe extends Module {
 
         FindItemResult itemResult = InvUtils.findInHotbar(Items.ITEM_FRAME, Items.GLOW_ITEM_FRAME);
         if (!itemResult.found()) {
-            sendToast("Item Frame Dupe", "No item frames in your hotbar!");
+            Utils.sendToast("Item Frame Dupe", "No item frames in your hotbar!");
             toggle();
             return;
         }
 
         for (Entity entity : mc.world.getEntities()) {
             if (entity instanceof ItemFrameEntity) {
-                sendToast("Item Frame Dupe", "Detected Frame, now duping!");
+                Utils.sendToast("Item Frame Dupe", "Detected Frame, now duping!");
             }
         }
 
