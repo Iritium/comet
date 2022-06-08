@@ -28,7 +28,6 @@ Function: sendToast( Title, Description )
 ```java
 public class test extends Command {
     public BookCrashCommand() { super("test", "Shows a test toast!"); }
-
     @Override
     public void build(LiteralArgumentBuilder<CommandSource> builder) {
         builder.executes(context -> {
