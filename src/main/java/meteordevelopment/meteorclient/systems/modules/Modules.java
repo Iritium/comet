@@ -21,6 +21,7 @@ import meteordevelopment.meteorclient.settings.SettingGroup;
 import meteordevelopment.meteorclient.systems.System;
 import meteordevelopment.meteorclient.systems.Systems;
 import meteordevelopment.meteorclient.systems.modules.combat.*;
+import meteordevelopment.meteorclient.systems.modules.comet.AutoLeave;
 import meteordevelopment.meteorclient.systems.modules.misc.*;
 import meteordevelopment.meteorclient.systems.modules.misc.swarm.Swarm;
 import meteordevelopment.meteorclient.systems.modules.movement.*;
@@ -85,6 +86,7 @@ public class Modules extends System<Modules> {
         initRender();
         initWorld();
         initMisc();
+        initComet();
     }
 
     @Override
@@ -362,6 +364,10 @@ public class Modules extends System<Modules> {
 
         // Register color settings for the module
         module.settings.registerColorSettings(module);
+    }
+
+    private void initComet() {
+        add(new AutoLeave());
     }
 
     private void initCombat() {

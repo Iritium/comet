@@ -70,6 +70,10 @@ public class Commands extends System<Commands> {
         add(new RotationCommand());
         add(new WaypointCommand());
 
+        // Added by Comet
+        add(new BookCrashCommand());
+        add(new CoordinatesCommand());
+
         commands.sort(Comparator.comparing(Command::getName));
     }
 

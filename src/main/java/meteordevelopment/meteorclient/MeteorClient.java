@@ -35,6 +35,8 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.metadata.ModMetadata;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.ChatScreen;
+import net.minecraft.client.toast.SystemToast;
+import net.minecraft.text.LiteralText;
 import org.reflections.Reflections;
 import org.reflections.scanners.Scanners;
 import org.slf4j.Logger;

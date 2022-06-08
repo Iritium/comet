@@ -99,6 +99,10 @@ public class HUD extends System<HUD> {
         // Top Left
         topLeft = new HudElementLayer(RENDERER, elements, AlignmentX.Left, AlignmentY.Top, 2, 2);
         topLeft.add(new LogoHud(this));
+
+        // Comet Logo
+        topLeft.add(new CometLogo(this));
+
         topLeft.add(new WatermarkHud(this));
         topLeft.add(new FpsHud(this));
         topLeft.add(new PingHud(this));

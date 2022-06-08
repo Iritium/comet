@@ -13,7 +13,9 @@ import meteordevelopment.meteorclient.systems.config.Config;
 import meteordevelopment.meteorclient.utils.Utils;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.toast.SystemToast;
 import net.minecraft.command.CommandSource;
+import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 
 import java.util.ArrayList;
@@ -45,6 +47,10 @@ public abstract class Command {
 
     protected static LiteralArgumentBuilder<CommandSource> literal(final String name) {
         return LiteralArgumentBuilder.literal(name);
+    }
+
+    public void sendToast(String title, String info){
+        mc.getToastManager().add(new SystemToast(SystemToast.Type.TUTORIAL_HINT, new LiteralText(title), new LiteralText(info)));
     }
 
     public final void registerTo(CommandDispatcher<CommandSource> dispatcher) {

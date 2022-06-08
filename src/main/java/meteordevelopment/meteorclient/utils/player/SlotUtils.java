@@ -10,10 +10,7 @@ import meteordevelopment.meteorclient.mixin.HorseScreenHandlerAccessor;
 import net.minecraft.client.gui.screen.ingame.CreativeInventoryScreen;
 import net.minecraft.entity.mob.SkeletonHorseEntity;
 import net.minecraft.entity.mob.ZombieHorseEntity;
-import net.minecraft.entity.passive.AbstractDonkeyEntity;
-import net.minecraft.entity.passive.HorseBaseEntity;
-import net.minecraft.entity.passive.HorseEntity;
-import net.minecraft.entity.passive.LlamaEntity;
+import net.minecraft.entity.passive.*;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.screen.*;
 
