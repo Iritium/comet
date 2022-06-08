@@ -1,11 +1,39 @@
 
 <p align="center">
-<img src="https://i.imgur.com/eCfeXr7.png" alt="meteor-client-logo" width="20%"/>
+<img src="https://i.imgur.com/JpUxGBW.png" alt="meteor-client-logo" width="20%"/>
 </p>
 
-<h1 align="center">Comet</h1>
-
 <p align="center">A custom fork of the popular Meteor Client.</p>
+
+
+<h2 align="left">Commands Added</h2>
+
+| Title | Description | Command | Arguments | 
+| --- | --- | --- | --- |
+| Ram Buster Book | Overload a servers ram usage via NBT tag overload (creative only) | `.bookcrash` | None | 
+| Coordinates | Copy your current x, z coordinates to your clipboard or say in chat | `.coordinates` | clipboard / chat |
+
+<h2 align="left">Utils Added</h2>
+
+
+Toast - Send a toast when doing a task
+
+Function: sendToast( Title, Description )
+```java
+public class test extends Command {
+    public BookCrashCommand() { super("test", "Shows a test toast!"); }
+
+    @Override
+    public void build(LiteralArgumentBuilder<CommandSource> builder) {
+        builder.executes(context -> {
+            sendToast("Test", "This is a test toast!");
+            return SINGLE_SUCCESS;
+        });
+    }
+}
+```
+
+
 
 ## Credits
 [Cabaletta](https://github.com/cabaletta) for [Baritone](https://github.com/cabaletta/baritone)  
