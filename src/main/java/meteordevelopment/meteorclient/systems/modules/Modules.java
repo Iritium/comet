@@ -22,6 +22,9 @@ import meteordevelopment.meteorclient.systems.System;
 import meteordevelopment.meteorclient.systems.Systems;
 import meteordevelopment.meteorclient.systems.modules.combat.*;
 import meteordevelopment.meteorclient.systems.modules.comet.AutoLeave;
+import meteordevelopment.meteorclient.systems.modules.comet.AutoWither;
+import meteordevelopment.meteorclient.systems.modules.comet.CometDiscordPresence;
+import meteordevelopment.meteorclient.systems.modules.comet.CoordinateLogger;
 import meteordevelopment.meteorclient.systems.modules.misc.*;
 import meteordevelopment.meteorclient.systems.modules.misc.swarm.Swarm;
 import meteordevelopment.meteorclient.systems.modules.movement.*;
@@ -368,12 +371,15 @@ public class Modules extends System<Modules> {
 
     private void initComet() {
         add(new AutoLeave());
+        add(new AutoWither());
+        add(new CometDiscordPresence());
+        add(new CoordinateLogger());
     }
 
     private void initCombat() {
         add(new AimAssist());
         add(new AnchorAura());
-//        add(new AntiAnchor());
+        // add(new AntiAnchor());
         add(new AntiAnvil());
         add(new AntiBed());
         add(new ArrowDodge());

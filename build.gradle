@@ -53,6 +53,10 @@ dependencies {
 
     // Launch sub project
     shadow project(":launch")
+
+    // Litematica
+    modImplementation "curse.maven:litematica-${project.litematica_projectid}:${project.litematica_fileid}"
+    modImplementation "fi.dy.masa.malilib:malilib-fabric-1.18.0:0.10.0-dev.26" //litematica uses old version
 }
 
 loom {

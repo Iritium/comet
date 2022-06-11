@@ -57,18 +57,18 @@ public class NameHistoryCommand extends Command {
                 Color nameColor = PlayerUtils.getPlayerColor(mc.world.getPlayerByUuid(uuid), Utils.WHITE);
 
                 initial.setStyle(initial.getStyle()
-                        .withColor(new TextColor(nameColor.getPacked()))
-                        .withClickEvent(new ClickEvent(
-                                        ClickEvent.Action.OPEN_URL,
-                                        "https://namemc.com/search?q=" + name
-                                )
+                    .withColor(new TextColor(nameColor.getPacked()))
+                    .withClickEvent(new ClickEvent(
+                            ClickEvent.Action.OPEN_URL,
+                            "https://namemc.com/search?q=" + name
                         )
-                        .withHoverEvent(new HoverEvent(
-                                HoverEvent.Action.SHOW_TEXT,
-                                new LiteralText("View on NameMC")
-                                        .formatted(Formatting.YELLOW)
-                                        .formatted(Formatting.ITALIC)
-                        ))
+                    )
+                    .withHoverEvent(new HoverEvent(
+                        HoverEvent.Action.SHOW_TEXT,
+                        new LiteralText("View on NameMC")
+                            .formatted(Formatting.YELLOW)
+                            .formatted(Formatting.ITALIC)
+                    ))
                 );
 
                 info(initial.append(new LiteralText(" Username History:").formatted(Formatting.GRAY)));
