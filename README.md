@@ -17,7 +17,9 @@
 
 | Title | Description |
 | --- | --- |
-| `AutoLeave` | Automaticlly leave if a selected entity enters range |
+| `Auto Leave` | Automaticlly leave if a selected entity enters range |
+| `Auto Wither` | Automaticlly create withers in a given range |
+| `Coordinate Logger` | Log the coordinates of world events |
 
 
 <h2 align="left">Utils Added</h2>
